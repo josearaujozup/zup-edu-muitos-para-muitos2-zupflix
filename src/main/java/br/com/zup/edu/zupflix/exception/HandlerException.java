@@ -1,4 +1,4 @@
-package exception;
+package br.com.zup.edu.zupflix.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

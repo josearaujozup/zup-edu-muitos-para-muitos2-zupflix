@@ -1,4 +1,4 @@
-package exception;
+package br.com.zup.edu.zupflix.exception;
 
 import java.util.ArrayList;
 import java.util.List;

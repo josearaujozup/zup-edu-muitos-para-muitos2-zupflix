@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,7 +41,7 @@ public class Palestra {
 	
 	@Column(nullable = false)
     @Size(min = 1)
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "palestra_zupper", joinColumns = @JoinColumn(name = "palestra_id"), inverseJoinColumns = @JoinColumn(name = "zupper_id"))
     private Set<Zupper> zuppers = new HashSet<>();
 
